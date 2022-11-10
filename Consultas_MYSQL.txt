@@ -1,0 +1,11 @@
+
+*Realizar una consulta que permita conocer cuál es el producto que más stock tiene.
+-Respuesta:
+SELECT  `nombre_producto`,MAX(`stock`)  FROM `productos`;
+
+|------------------------------------------------------------------------|
+
+*Realizar una consulta que permita conocer cuál es el producto más vendido.
+-Respuesta:
+
+SELECT id_producto, SUM(stock) AS Cantidad FROM venta GROUP BY id_producto ORDER BY Cantidad DESC LIMIT 1;
